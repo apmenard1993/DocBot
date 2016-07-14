@@ -7,7 +7,7 @@ m = MarkovChat.new
 puts "This bot's invite URL is #{bot.invite_url}."
 puts 'Click on it to invite it to your server.'
 
-bot.message(with_text: 'Ping!', in: "#docs") do |event|
+bot.message(in: "#docs", with_text: 'Ping!') do |event|
     event.respond 'Pong!'
 end
 
