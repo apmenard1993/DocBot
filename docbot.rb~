@@ -9,7 +9,11 @@ puts 'Click on it to invite it to your server.'
 
 bot.message(with_text: 'Ping!') do |event|
     msg = event.respond 'Pong!'
-    msh.edit "Pong! Time taken: #{Time.now - event.timestamp} seconds."
+    msg.edit "Pong! Time taken: #{Time.now - event.timestamp} seconds."
+end
+
+bot.message(with_text: 'pls', in: "#docs") do |event|
+    msg = event.respond 'NO'
 end
 
 bot.run

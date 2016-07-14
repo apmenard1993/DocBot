@@ -12,5 +12,9 @@ bot.message(with_text: 'Ping!') do |event|
     msg.edit "Pong! Time taken: #{Time.now - event.timestamp} seconds."
 end
 
-bot.run
+bot.message(with_text: 'pls', in: "#docs") do |event|
+    msg = event.respond 'NO'
+end
+
+bot.run :async
 
