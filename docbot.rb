@@ -8,7 +8,8 @@ puts "This bot's invite URL is #{bot.invite_url}."
 puts 'Click on it to invite it to your server.'
 
 bot.message(with_text: 'Ping!') do |event|
-    event.respond 'Pong!'
+    msg = event.respond 'Pong!'
+    msg.edit "Pong! Time taken: #{Time.now - event.timestamp} seconds."
 end
 
 bot.run
