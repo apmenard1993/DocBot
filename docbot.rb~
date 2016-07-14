@@ -16,5 +16,5 @@ bot.message(with_text: 'pls', in: "#docs") do |event|
     msg = event.respond 'NO'
 end
 
-bot.run
+bot.run :async
 
