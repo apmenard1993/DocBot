@@ -18,9 +18,9 @@ bot.message(in: "#docs") do |event|
     content = event.content
     list = content.split(/[^[[:word:]]]+/)
     targetWord = list.sample
-    msg = event.respond(m.chat(targetWord))
+    message = m.chat(targetWord)
     m.add_sentence(content)
-    msg
+    msg = event.respond(message)
 end
 
 bot.run

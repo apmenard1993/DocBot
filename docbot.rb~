@@ -23,5 +23,5 @@ bot.message(in: "#docs") do |event|
     msg
 end
 
-bot.run :async
+bot.run
 
