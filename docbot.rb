@@ -2,6 +2,7 @@ require 'discordrb'
 require './markovchat'
 
 bot = Discordrb::Bot.new token: "MjAxOTIzMDg0NTc4NTg2NjMz.CmS4vw.fnv8LQOetPNgS684ZzKeSWNzU7U", application_id: 201910521111379968
+bot.profile.avatar_url = "http://www.head2headbarbers.com/wp-content/uploads/2013/04/20130422-065734-640x300.jpg"
 m = MarkovChat.new("docChat.db")
 m.load
 response_chance = 15
