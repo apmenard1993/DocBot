@@ -5,6 +5,9 @@ bot = Discordrb::Bot.new token: 'MjAxOTIzMDg0NTc4NTg2NjMz.CmS4vw.fnv8LQOetPNgS68
 m = MarkovChat.new("docChat.db")
 m.load
 
+num = 1 + rand(6)
+puts num
+
 puts "This bot's invite URL is #{bot.invite_url}."
 puts 'Click on it to invite it to your server.'
 
@@ -19,8 +22,6 @@ bot.message(in: "#docs") do |event|
     targetWord = list.sample
     message = m.chat(targetWord)
     m.add_sentence(content)
-    num = 1 + rand(6)
-    puts num
     msg = event.respond(message)
 end
 
