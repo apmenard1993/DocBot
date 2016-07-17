@@ -20,10 +20,10 @@ bot.message(in: "#docs") do |event|
     list = content.split(/[^[[:word:]]]+/)
     targetWord = list.sample
     message = m.chat(targetWord)
-    if 1 + rand(6)
-        message = ""
-    end
     m.add_sentence(content)
+    if 1 + rand(6)
+        return
+    end
     msg = event.respond(message)
 end
 
