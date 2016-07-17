@@ -18,8 +18,8 @@ bot.message(in: "#docs") do |event|
     content = event.content
     list = content.split(/[^[[:word:]]]+/)
     targetWord = list.sample
-    msg = event.respond(m.chat(targetWord))
     m.add_sentence(content)
+    msg = event.respond(m.chat(targetWord))
 end
 
 bot.run
