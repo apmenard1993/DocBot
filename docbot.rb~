@@ -35,6 +35,8 @@ bot.message(from: ["Naosyth", "apmenard1993"], containing: "!Chance") do |event|
     if list.size == 3
         response_chance = list[1].to_i
         response_threshold = list[2].to_i
+    end
+end
 
 bot.run
 
