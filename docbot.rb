@@ -18,6 +18,7 @@ bot.message(in: "#docs") do |event|
     content = event.content
     puts content
     #msg = event.respond 'NO'
+    nil
 end
 
 bot.run
