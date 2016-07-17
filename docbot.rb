@@ -19,6 +19,7 @@ oldContent = nil
 bot.message(in: "#docs") do |event|
     if oldContent != nil
         m.add_sentence(oldContent)
+    end
     content = event.content
     list = content.split(/[^[[:word:]]]+/)
     targetWord = list.sample
