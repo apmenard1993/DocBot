@@ -32,6 +32,7 @@ end
 bot.message(from: ["Naosyth", "apmenard1993"], containing: "!Chance") do |event|
     content = event.content
     list = content.split(/[^[[:word:]]]+/)
+    puts list
     if list.size == 3
         response_chance = list[1].to_i
         response_threshold = list[2].to_i
