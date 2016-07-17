@@ -26,5 +26,5 @@ bot.message(in: "#docs") do |event|
     msg = event.respond(m.chat(targetWord))
 end
 
-bot.run
+bot.run :async
 
