@@ -21,8 +21,7 @@ bot.message(in: "#docs") do |event|
     #targetWord = list.sample
     #message = m.chat(targetWord)
     #m.add_sentence(content)
-    #msg = event.respond(message)
-    nil
+    msg = event.respond(m.chat)
 end
 
 bot.run
