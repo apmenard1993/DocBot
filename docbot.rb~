@@ -8,6 +8,8 @@ m.load
 puts "This bot's invite URL is #{bot.invite_url}."
 puts 'Click on it to invite it to your server.'
 
+bot.send_message(152213953081114624, "Docbot Starting... apologies for possible spam while testing!")
+
 bot.message(with_text: 'Ping!') do |event|
     msg = event.respond 'Pong!'
     msg.edit "Pong! Time taken: #{Time.now - event.timestamp} seconds."

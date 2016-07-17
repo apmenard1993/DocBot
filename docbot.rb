@@ -26,7 +26,7 @@ bot.message(in: "#docs") do |event|
     num = 1 + rand(6)
     p num
     if not num
-        return
+        msg = event.respond("not talking")
     end
     msg = event.respond(message)
 end
