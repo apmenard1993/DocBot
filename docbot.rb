@@ -22,7 +22,7 @@ bot.message(in: "#docs", with_text: not!("QuackSave")) do |event|
     message = m.chat(targetWord)
     m.add_sentence(content)
     m.background_save
-    if 1 + rand(response_chance) >= response_threshold
+    if rand * 100 < response_chance
         event.respond(message)
     else
         nil
@@ -32,10 +32,9 @@ end
 bot.message(from: ["Naosyth", "apmenard1993"], containing: "Chance") do |event|
     content = event.content
     list = content.split(/[^[[:word:]]]+/)
-    if list.size == 3
+    if list.size == 2
         response_chance = list[1].to_i
-        response_threshold = list[2].to_i
-        event.respond("Changing response frequency to if 1 in #{response_chance} >= #{response_threshold}")
+        event.respond("Changing response frequency to #{response_chance} / 100")
     end
 end
 
