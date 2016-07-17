@@ -16,16 +16,14 @@ end
 counter = 0
 
 bot.message(in: "#docs") do |event|
-    if counter > 6
-        counter = 0
-    if (counter + rand(6)) > 8
-        content = event.content
-        list = content.split(/[^[[:word:]]]+/)
-        targetWord = list.sample
-        message = m.chat(targetWord)
-        m.add_sentence(content)
-        msg = event.respond(message)
-        counter = counter + 1
+    content = event.content
+    list = content.split(/[^[[:word:]]]+/)
+    targetWord = list.sample
+    message = m.chat(targetWord)
+    if 1 + rand(6)
+        message = ""
+    m.add_sentence(content)
+    msg = event.respond(message)
 end
 
 bot.run
