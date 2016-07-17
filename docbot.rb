@@ -35,6 +35,7 @@ bot.message(from: ["Naosyth", "apmenard1993"], containing: "!Chance") do |event|
     if list.size == 3
         response_chance = list[1].to_i
         response_threshold = list[2].to_i
+        event.respond("Changing response frequency to if 1 in #{response_chance} >= #{response_threshold}")
     end
 end
 
