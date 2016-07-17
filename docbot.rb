@@ -2,7 +2,7 @@ require 'discordrb'
 require './markovchat'
 
 bot = Discordrb::Bot.new token: "MjAxOTIzMDg0NTc4NTg2NjMz.CmS4vw.fnv8LQOetPNgS684ZzKeSWNzU7U", application_id: 201910521111379968
-puts bot.profile
+p bot.profile
 m = MarkovChat.new("docChat.db")
 m.load
 response_chance = 15
