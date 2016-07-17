@@ -13,15 +13,14 @@ bot.message(with_text: 'Ping!') do |event|
 end
 
 counter = 0
-content = nil
-oldContent = nil
 
 bot.message(in: "#docs") do |event|
     content = event.content
     list = content.split(/[^[[:word:]]]+/)
     targetWord = list.sample
-    oldContent = content
     msg = event.respond(m.chat(targetWord))
+    m.add_sentence(content)
+    msg
 end
 
 bot.run :async
