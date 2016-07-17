@@ -24,10 +24,7 @@ bot.message(in: "#docs") do |event|
     message = m.chat(targetWord)
     m.add_sentence(content)
     num = 1 + rand(6)
-    p num
-    if not num
-        msg = event.respond("not talking")
-    end
+    puts num
     msg = event.respond(message)
 end
 
