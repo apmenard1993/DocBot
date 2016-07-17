@@ -23,7 +23,7 @@ bot.message(in: "#docs") do |event|
     m.add_sentence(content)
     num = 1 + rand(6)
     p num
-    if num
+    if not num
         return
     end
     msg = event.respond(message)
