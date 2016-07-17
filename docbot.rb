@@ -17,11 +17,11 @@ counter = 0
 bot.message(in: "#docs") do |event|
     content = event.content
     p content
-    list = content.split(/[^[[:word:]]]+/)
-    targetWord = list.sample
-    message = m.chat(targetWord)
-    m.add_sentence(content)
-    msg = event.respond(message)
+    #list = content.split(/[^[[:word:]]]+/)
+    #targetWord = list.sample
+    #message = m.chat(targetWord)
+    #m.add_sentence(content)
+    #msg = event.respond(message)
 end
 
 bot.run
