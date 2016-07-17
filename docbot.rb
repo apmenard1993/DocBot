@@ -19,6 +19,8 @@ bot.message(in: "#docs") do |event|
     targetWord = list.sample
     message = m.chat(targetWord)
     m.add_sentence(content)
+    num = 1 + rand(6)
+    puts num
     msg = event.respond(message)
 end
 
