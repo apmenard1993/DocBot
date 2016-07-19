@@ -20,7 +20,7 @@ bot.message(in: "#docs", with_text: not!("QuackSave")) do |event|
     list = content.split()
     targetWord = list.sample
     if targetWord == nil
-        break
+        targetWord = "nope"
     end
     message = m.chat(targetWord)
     m.add_sentence(content)
