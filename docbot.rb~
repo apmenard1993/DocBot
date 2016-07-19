@@ -29,7 +29,7 @@ bot.message(in: "#docs", with_text: not!("QuackSave")) do |event|
     end
 end
 
-bot.message(from: ["Naosyth", "apmenard1993"], containing: "Chance") do |event|
+bot.message(from: ["Naosyth", "apmenard1993", "Decosun"], containing: "Chance") do |event|
     content = event.content
     list = content.split(/[^[[:word:]]]+/)
     if list.size == 2
