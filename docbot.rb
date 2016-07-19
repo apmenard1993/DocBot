@@ -19,6 +19,9 @@ bot.message(in: "#docs", with_text: not!("QuackSave")) do |event|
     content = event.content
     list = content.split()
     targetWord = list.sample
+    if targetWord == nil
+        break
+    end
     message = m.chat(targetWord)
     m.add_sentence(content)
     m.background_save

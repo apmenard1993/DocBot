@@ -17,7 +17,7 @@ end
 
 bot.message(in: "#docs", with_text: not!("QuackSave")) do |event|
     content = event.content
-    list = content.split(/[^[[:word:]]]+/)
+    list = content.split()
     targetWord = list.sample
     message = m.chat(targetWord)
     m.add_sentence(content)
