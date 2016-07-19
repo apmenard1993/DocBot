@@ -19,7 +19,7 @@ bot.message(in: "#docs", with_text: not!("QuackSave")) do |event|
     content = event.content
     list = content.split()
     targetWord = list.sample
-    if targetWord == nil
+    if targetWord.include?("-")
         targetWord = "nope"
     end
     message = m.chat(targetWord)
