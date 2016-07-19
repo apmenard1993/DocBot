@@ -22,7 +22,7 @@ bot.message(in: "#docs", with_text: not!("QuackSave")) do |event|
     message = m.chat(targetWord)
     m.add_sentence(content)
     m.background_save
-    if rand * 100 < response_chance or content.include? "docbot" or content.include? "DB"
+    if rand * 100 < response_chance || content.include?("docbot") || content.include?("DB")
         event.respond(message)
     else
         nil
