@@ -29,12 +29,14 @@ bot.message(in: "#docs", with_text: not!("QuackSave")) do |event|
     end
 end
 
-bot.message(from: ["Naosyth", "apmenard1993"], containing: "Chance") do |event|
+bot.message(from: ["Naosyth", "apmenard1993", "Decosun"], containing: "Chance") do |event|
     content = event.content
     list = content.split(/[^[[:word:]]]+/)
     if list.size == 2
         response_chance = list[1].to_i
         event.respond("Changing response frequency to #{response_chance} / 100")
+    else if list.size == 1
+        event.respond("Response chance is #{response_chance} / 100")
     end
 end
 
