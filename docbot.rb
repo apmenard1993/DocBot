@@ -20,8 +20,7 @@ bot.message(in: "#docs", with_text: not!("QuackSave")) do |event|
     if content is Nil
         content = "wat"
     end
-    filteredContent = content.gsub!("-", " ")
-    list = filteredContent.split()
+    list = content.split(/[^[[:word:]]]+/)
     targetWord = list.sample
     if targetWord.include?("-")
         targetWord = "nope"
