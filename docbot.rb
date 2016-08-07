@@ -17,6 +17,8 @@ end
 
 bot.message(in: "#docs", with_text: not!("QuackSave")) do |event|
     content = event.content
+    if content is Nil
+        content = "wat"
     filteredContent = content.gsub!("-", " ")
     list = filteredContent.split()
     targetWord = list.sample
@@ -35,8 +37,6 @@ end
 
 bot.message(from: ["Naosyth", "apmenard1993", "Decosun"], containing: "Chance") do |event|
     content = event.content
-    if content is Nil
-        content = "wat"
     list = content.split(/[^[[:word:]]]+/)
     if list.size == 2
         response_chance = list[1].to_i
