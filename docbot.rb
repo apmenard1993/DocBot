@@ -1,7 +1,7 @@
 require 'discordrb'
 require './markovchat'
 
-bot = Discordrb::Bot.new token: "MjAxOTIzMDg0NTc4NTg2NjMz.CmS4vw.fnv8LQOetPNgS684ZzKeSWNzU7U", application_id: 201910521111379968
+bot = Discordrb::Bot.new token: "asdf", application_id: 0
 
 m = MarkovChat.new("docChat.db")
 m.load
